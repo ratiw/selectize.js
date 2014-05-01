@@ -1320,7 +1320,7 @@ $.extend(Selectize.prototype, {
 				}
 
 				self.updatePlaceholder();
-				self.trigger('item_add', value, $item);
+				self.trigger('item_add', value, $item, self.options[value]);
 				self.updateOriginalInput();
 			}
 		});
