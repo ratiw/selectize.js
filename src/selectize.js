@@ -637,6 +637,7 @@ $.extend(Selectize.prototype, {
 		fn.apply(self, [function(results) {
 			self.loading = Math.max(self.loading - 1, 0);
 			if (results && results.length) {
+				self.clearOptions();
 				self.addOption(results);
 				self.refreshOptions(self.isFocused && !self.isInputHidden);
 			}
